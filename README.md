@@ -9,7 +9,8 @@ Below is the table of the completed challenges. Each day has two parts, and the 
 | Year | Day | Elixir Part 1 | Elixir Part 2 | TypeScript Part 1 | TypeScript Part 2 |
 | ---- | --- | ------------- | ------------- | ----------------- | ----------------- |
 | 2023 | 1   | ✅             | ✅             | ✅                 | ✅                 |
-| 2023 | 2   | ✅             | 🚀             | 🚀                 | 🔜                 |
+| 2023 | 2   | ✅             | ✅             | ✅                 | ✅                 |
+| 2023 | 3   | 🚀             | 🔜             | 🚀                 | 🔜                 |
 
 
 ---
