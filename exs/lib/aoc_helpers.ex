@@ -28,10 +28,11 @@ defmodule AOC do
   @doc """
   Solve one AOC puzzle given input path and parse(), part1(), and part2() functions.
   """
-  def solve(path, part1_func) do
+  def solve(path, part1_func, part2_func) do
     IO.puts("\n#{path}:")
 
     input = read_text(path) |> parse()
     input |> part1_func.() |> IO.puts()
+    input |> part2_func.() |> IO.puts()
   end
 end

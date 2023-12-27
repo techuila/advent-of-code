@@ -4,14 +4,16 @@ defmodule AOC2023.Day01.Test do
   """
 
   use ExUnit.Case, async: true
-  import AOC2023.Day01, only: [part1: 1]
-  doctest AOC2023.Day01
+  import AOC2023.Day01, only: [part1: 1, part2: 1]
+  doctest(AOC2023.Day01, import: true)
 
   @input_dir "lib/2023/01_trebuchet"
   setup_all do
     {:ok,
      [
-       example1: @input_dir |> Path.join("example1.txt") |> AOC.read_text() |> AOC.parse()
+       example1: @input_dir |> Path.join("example1.txt") |> AOC.read_text() |> AOC.parse(),
+       example2: @input_dir |> Path.join("example2.txt") |> AOC.read_text() |> AOC.parse(),
+       input: @input_dir |> Path.join("inputs.txt") |> AOC.read_text() |> AOC.parse()
      ]}
   end
 
@@ -23,5 +25,24 @@ defmodule AOC2023.Day01.Test do
   @tag :example
   test "part 1 | example 1", %{example1: example1} do
     assert part1(example1) === 142
+  end
+
+  @tag :example
+  test "part 2 | example 2", %{example2: example2} do
+    assert part2(example2) === 281
+  end
+
+  @tag :solution
+  @tag :year2023
+  @tag :day1
+  test "part 1 solved", %{input: input} do
+    assert part1(input) === 54_667
+  end
+
+  @tag :solution
+  @tag :year2023
+  @tag :day1
+  test "part 2 solved", %{input: input} do
+    assert part2(input) === 54_203
   end
 end
