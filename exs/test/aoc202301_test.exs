@@ -4,14 +4,14 @@ defmodule AOC2023.Day01.Test do
   """
 
   use ExUnit.Case, async: true
-  import AOC2023.Day01, only: [parse: 1, part1: 1]
+  import AOC2023.Day01, only: [part1: 1]
   doctest AOC2023.Day01
 
   @input_dir "lib/2023/01_trebuchet"
   setup_all do
     {:ok,
      [
-       example1: @input_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse()
+       example1: @input_dir |> Path.join("example1.txt") |> AOC.read_text() |> AOC.parse()
      ]}
   end
 

@@ -10,6 +10,15 @@ defmodule AOC do
   end
 
   @doc """
+  Parse input
+  """
+  def parse(input),
+    do:
+      input
+      |> String.split("\n", trim: true)
+      |> Enum.map(fn line -> String.replace(line, "\r", "") end)
+
+  @doc """
   Read text from the given path.
   """
   def read_text(path) do
@@ -19,10 +28,10 @@ defmodule AOC do
   @doc """
   Solve one AOC puzzle given input path and parse(), part1(), and part2() functions.
   """
-  def solve(path, parse_func, part1_func) do
+  def solve(path, part1_func) do
     IO.puts("\n#{path}:")
 
-    input = read_text(path) |> parse_func.()
+    input = read_text(path) |> parse()
     input |> part1_func.() |> IO.puts()
   end
 end

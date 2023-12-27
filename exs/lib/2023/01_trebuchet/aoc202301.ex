@@ -6,18 +6,18 @@ defmodule AOC2023.Day01 do
   require AOC
 
   @doc """
-  Parse input
-  """
-  def parse(input), do: input |> String.split("\n", trim: true)
-
-  @doc """
   Solve part 1
   """
   def part1(lines) do
     lines
+    |> Enum.reduce(0, fn line, acc ->
+      String.replace(line, ~r/[^0-9]/, "")
+      |> then(fn x -> String.to_integer(String.at(x, 0) <> String.at(x, -1)) end)
+      |> Kernel.+(acc)
+    end)
   end
 
   def main(args) do
-    Enum.map(args, fn path -> AOC.solve(path, &parse/1, &part1/1) end)
+    Enum.map(args, fn path -> AOC.solve(path, &part1/1) end)
   end
 end
