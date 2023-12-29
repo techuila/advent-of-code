@@ -53,14 +53,14 @@ defmodule AOC2023.Day02.Test do
 
   @tag :solution
   @tag :year2023
-  @tag :day1
+  @tag :day2
   test "part 1 solved", %{input: input} do
     assert part1(input) === 2_528
   end
 
   @tag :solution
   @tag :year2023
-  @tag :day1
+  @tag :day2
   test "part 2 solved", %{input: input} do
     assert part2(input) === 67_363
   end

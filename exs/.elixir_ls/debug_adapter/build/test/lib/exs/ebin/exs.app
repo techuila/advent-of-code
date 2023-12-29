@@ -1,0 +1,9 @@
+{application,exs,
+             [{optional_applications,[]},
+              {applications,[kernel,stdlib,elixir,logger]},
+              {description,"exs"},
+              {modules,['Elixir.AOC','Elixir.AOC2023.Day01',
+                        'Elixir.AOC2023.Day02','Elixir.AOC2023.Day03',
+                        'Elixir.Exs','Elixir.MatrixTraversal']},
+              {registered,[]},
+              {vsn,"0.1.0"}]}.
