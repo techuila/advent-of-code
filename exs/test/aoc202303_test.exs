@@ -38,10 +38,10 @@ defmodule AOC2023.Day03.Test do
     assert part1(example1) === 4_361
   end
 
-  # @tag :example
-  # test "part 2 | example", %{example1: example1} do
-  #   assert part2(example1) === 2_286
-  # end
+  @tag :example
+  test "part 2 | example", %{example1: example1} do
+    assert part2(example1) === 2_286
+  end
 
   @tag timeout: 600_000
   @tag :solution

@@ -13,6 +13,16 @@
 			"cwd": "${workspaceFolder}/typescript",
 			"console": "integratedTerminal",
 			"internalConsoleOptions": "neverOpen"
+		},
+		{
+			"type": "mix_task",
+			"request": "launch",
+			"name": "Run elixir mix tests",
+			"task": "test",
+			"taskArgs": ["test/aoc202303_test.exs", "--only", "example"],
+			"startApps": false,
+			"projectDir": "${workspaceFolder}/exs",
+			"internalConsoleOptions": "neverOpen"
 		}
 	]
 }
