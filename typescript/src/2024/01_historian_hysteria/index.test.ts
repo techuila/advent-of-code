@@ -16,17 +16,18 @@ describe("Tests for Advent of code 2024, day1: Historian Historia", () => {
   });
 
   describe("Test Solutions", () => {
-    test("Test from solution 1, it should return 2_528", () => {
+    test("Test from solution 1, it should return 936_063", () => {
       const inputs = get_inputs("inputs.txt");
 
       const result = historianHistoria.solution_1(inputs);
-      console.log(result);
+      expect(result).toEqual(936_063);
     });
 
     test("Test from solution 2, it should return 67_363", () => {
       const inputs = get_inputs("inputs.txt");
 
       const result = historianHistoria.solution_2(inputs);
+      console.log(result);
     });
   });
 });
