@@ -11,6 +11,7 @@ Below is the table of the completed challenges. Each day has two parts, and the 
 | 2023 | 1   | ✅             | ✅             | ✅                 | ✅                 |
 | 2023 | 2   | ✅             | ✅             | ✅                 | ✅                 |
 | 2023 | 3   | ✅             | 🔜             | 🚀                 | 🔜                 |
+| 2024 | 1   | 🔜             | 🔜             | ✅                 | 🚀                 |
 
 
 ---
