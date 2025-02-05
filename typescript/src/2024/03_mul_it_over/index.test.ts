@@ -13,6 +13,14 @@ describe("Tests for Advent of code 2024, day 3: Mul It Over", () => {
 
       expect(result).toEqual(161);
     });
+
+    test("Test from example 2, it should return 48", () => {
+      const inputs = get_inputs("example2.txt");
+
+      const result = mulItOver.solution_2(inputs);
+
+      expect(result).toEqual(48);
+    });
   });
 
   describe("Test Solutions", () => {
@@ -21,14 +29,16 @@ describe("Tests for Advent of code 2024, day 3: Mul It Over", () => {
 
       const result = mulItOver.solution_1(inputs);
 
-      console.log(result);
       expect(result).toEqual(183_669_043);
     });
 
-    test("Test from solution 2, it should return 621", () => {
+    test("Test from solution 2, it should return 59_097_164", () => {
       const inputs = get_inputs("inputs.txt");
+
       const result = mulItOver.solution_2(inputs);
-      expect(result).toEqual(621);
+      console.log(result);
+
+      expect(result).toEqual(59_097_164);
     });
   });
 });
