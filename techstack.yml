@@ -1,0 +1,56 @@
+repo_name: techuila/advent-of-code
+report_id: b42a14e0d1b2803d59c6c149b190ccc0
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-05T08:41:36+00:00'
+requested_by: techuila
+provider: github
+branch: main
+detected_tools_count: 4
+tools:
+- name: Elixir
+  description: Dynamic, functional language designed for building scalable and maintainable
+    applications
+  website_url: http://elixir-lang.org/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1974/drop.png
+  detection_source_url: https://github.com/techuila/advent-of-code
+  detection_source: Repo Metadata
+- name: pgvector
+  description: Open-source vector similarity search for Postgres
+  website_url: https://github.com/pgvector/pgvector/
+  open_source: false
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Database Tools
+  image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source_url: https://github.com/techuila/advent-of-code/blob/main/exs/lib/2023/01_trebuchet/example1.txt
+  detection_source: exs/lib/2023/01_trebuchet/example1.txt
+  last_updated_by: techuila
+  last_updated_on: 2023-12-19 18:13:53.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/techuila/advent-of-code
+  detection_source: Repo Metadata
+- name: LangChain
+  description: Build AI apps with LLMs through composability
+  website_url: https://github.com/hwchase17/langchain
+  open_source: true
+  hosted_saas: false
+  category: Communications
+  sub_category: Large Language Model Tools
+  image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source_url: https://github.com/techuila/advent-of-code/blob/main/exs/lib/2023/01_trebuchet/example1.txt
+  detection_source: exs/lib/2023/01_trebuchet/example1.txt
+  last_updated_by: techuila
+  last_updated_on: 2023-12-19 18:13:53.000000000 Z
