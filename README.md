@@ -14,6 +14,7 @@ Below is the table of the completed challenges. Each day has two parts, and the 
 | 2024 | 1   | 🚀             | 🚀             | ✅                 | ✅                 |
 | 2024 | 2   | 🚀             | 🚀             | ✅                 | ✅                 |
 | 2024 | 3   | 🚀             | 🚀             | ✅                 | ✅                 |
+| 2024 | 4   | 🚀             | 🚀             | ✅                 | 🚀                 |
 
 
 ---
