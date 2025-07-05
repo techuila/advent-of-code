@@ -19,26 +19,26 @@ export class CeresSearch implements AOC {
       let is_continue = false;
 
       if (FIND_WORD.startsWith(left_str)) {
+        is_continue = true;
         if (left_str === FIND_WORD) {
           words_found++;
-          return false;
+          is_continue = false;
         }
-        is_continue = true;
       }
 
       if (FIND_WORD.startsWith(right_str)) {
+        is_continue = true;
         if (right_str === FIND_WORD) {
           words_found++;
-          return false;
+          is_continue = false;
         }
-        is_continue = true;
       }
 
-      if (is_continue) {
-        return true;
+      if (!is_continue) {
+        return false;
       }
 
-      return false;
+      return true;
     }
 
     console.log(`Words found: ${words_found}`);
