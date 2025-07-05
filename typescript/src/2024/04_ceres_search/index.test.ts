@@ -14,7 +14,7 @@ describe("Tests for Advent of code 2024, day 4: Ceres Search", () => {
       expect(result).toEqual(18);
     });
 
-    test("Test from example 2, it should return __", () => {
+    test("Test from example 2, it should return 2_521", () => {
       //const inputs = get_inputs("example2.txt");
       //
       //const result = ceresSearch.solution_2(inputs);
@@ -25,11 +25,11 @@ describe("Tests for Advent of code 2024, day 4: Ceres Search", () => {
 
   describe("Test Solutions", () => {
     test("Test from solution 1, it should return __", () => {
-      //const inputs = get_inputs("inputs.txt");
-      //
-      //const result = ceresSearch.solution_1(inputs);
-      //
-      //expect(result).toEqual(10);
+      const inputs = get_inputs("inputs.txt");
+
+      const result = ceresSearch.solution_1(inputs);
+
+      expect(result).toEqual(2_521);
     });
 
     test("Test from solution 2, it should return __", () => {

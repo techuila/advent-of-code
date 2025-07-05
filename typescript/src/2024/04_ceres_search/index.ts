@@ -4,21 +4,45 @@ export class CeresSearch implements AOC {
   solution_1(inputs: string[]) {
     const FIND_WORD = "XMAS";
     const matrix = new Matrix(this.convertToMatrix(inputs));
+    let words_found = 0;
 
-    // @TODO:
-    // 1. Traverse all direction and find the matched word
-    //  1.a. If the character is found in the FIND_WORD, return true
-    //  1.b. If the character is not found, return false
-    // 2. Increment the count of the matched word if word is found
-    // 3. Return the count of the matched word
     matrix.traverse((row, col, val) => {
       if (val === FIND_WORD[0]) {
-        // matrix.horizontalTraverse(row, col, (index, left_value, right_value) => {});
-        // matrix.verticalTraverse(row, col);
-        // matrix.diagonalTraverse(row, col);
-        // matrix.antiDiagonalTraverse(row, col);
+        matrix.horizontalTraverse(row, col, find_word);
+        matrix.verticalTraverse(row, col, find_word);
+        matrix.diagonalTraverse(row, col, find_word);
+        matrix.antiDiagonalTraverse(row, col, find_word);
       }
     });
+
+    function find_word(_: number, left_str: string, right_str: string) {
+      let is_continue = false;
+
+      if (FIND_WORD.startsWith(left_str)) {
+        if (left_str === FIND_WORD) {
+          words_found++;
+          return false;
+        }
+        is_continue = true;
+      }
+
+      if (FIND_WORD.startsWith(right_str)) {
+        if (right_str === FIND_WORD) {
+          words_found++;
+          return false;
+        }
+        is_continue = true;
+      }
+
+      if (is_continue) {
+        return true;
+      }
+
+      return false;
+    }
+
+    console.log(`Words found: ${words_found}`);
+    return words_found;
   }
 
   solution_2(inputs: string[]) {}
@@ -50,9 +74,14 @@ class Matrix {
     col: number,
     cb: (index: number, left_value: string, right_value: string) => boolean
   ) {
-    this.loop((i) =>
-      cb(i, this.matrix[row][col - i], this.matrix[row][col + i])
-    );
+    let left_str = "X",
+      right_str = "X";
+    this.loop((i) => {
+      left_str += -1 < col - i ? this.matrix[row][col - i] : " ";
+      right_str +=
+        this.matrix[row].length > col + i ? this.matrix[row][col + i] : " ";
+      return cb(i, left_str, right_str);
+    });
   }
 
   verticalTraverse(
@@ -60,9 +89,14 @@ class Matrix {
     col: number,
     cb: (index: number, left_value: string, right_value: string) => boolean
   ) {
-    this.loop((i) =>
-      cb(i, this.matrix[row - 1][col], this.matrix[row + i][col])
-    );
+    let left_str = "X",
+      right_str = "X";
+    this.loop((i) => {
+      left_str += -1 < row - i ? this.matrix[row - i][col] : " ";
+      right_str +=
+        this.matrix.length > row + i ? this.matrix[row + i][col] : " ";
+      return cb(i, left_str, right_str);
+    });
   }
 
   diagonalTraverse(
@@ -70,9 +104,17 @@ class Matrix {
     col: number,
     cb: (index: number, left_value: string, right_value: string) => boolean
   ) {
-    this.loop((i) =>
-      cb(i, this.matrix[row + i][col - i], this.matrix[row - i][col + i])
-    );
+    let left_str = "X",
+      right_str = "X";
+    this.loop((i) => {
+      left_str +=
+        -1 < row - i && -1 < col - i ? this.matrix[row - i][col - i] : " ";
+      right_str +=
+        this.matrix.length > row + i && this.matrix[row].length > col + i
+          ? this.matrix[row + i][col + i]
+          : " ";
+      return cb(i, left_str, right_str);
+    });
   }
 
   antiDiagonalTraverse(
@@ -80,9 +122,19 @@ class Matrix {
     col: number,
     cb: (index: number, left_value: string, right_value: string) => boolean
   ) {
-    this.loop((i) =>
-      cb(i, this.matrix[row - i][col - i], this.matrix[row + i][col + i])
-    );
+    let left_str = "X",
+      right_str = "X";
+    this.loop((i) => {
+      left_str +=
+        -1 < row - i && this.matrix[row].length > col + i
+          ? this.matrix[row - i][col + i]
+          : " ";
+      right_str +=
+        -1 < col - i && this.matrix.length > row + i
+          ? this.matrix[row + i][col - i]
+          : " ";
+      return cb(i, left_str, right_str);
+    });
   }
 
   traverse(cb: (row: number, column: number, value: string) => void) {
