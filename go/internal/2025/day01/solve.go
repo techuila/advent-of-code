@@ -25,8 +25,8 @@ func SolvePart1(input []string) int {
 
 func SolvePart2(input []string) int {
 	var start = 50
-	var answer int
 
+	var answer int
 	for _, rotation := range input {
 		dir, turns := getDirTurns(rotation)
 
