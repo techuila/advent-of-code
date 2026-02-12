@@ -55,6 +55,6 @@ defmodule AOC2025.Day01.Test do
   @tag :year2025
   @tag :day1
   test "part 2 solved", %{input2: input2} do
-    assert part1(input2) === 6_932
+    assert part2(input2) === 6_932
   end
 end

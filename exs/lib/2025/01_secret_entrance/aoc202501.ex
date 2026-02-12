@@ -27,13 +27,11 @@ defmodule AOC2025.Day01 do
 	def part2(lines) do
 		lines
 		|> Enum.reduce({50, 0}, fn line, {position, zero_passed_total} ->
-	    {pos, zero_passed} =
-        line
-        |> getDirTurns()
-        |> getDialPosition(position)
-        |> countZeroPasses(getDirTurns(line))
+	    turns = getDirTurns(line)
+			zero_passed = countZeroPasses(turns, position)
+      new_position = getDialPosition(turns, position)
 
-        {pos, zero_passed_total + zero_passed}
+      {new_position, zero_passed_total + zero_passed}
     end)
     |> elem(1)
 	end
@@ -71,26 +69,24 @@ defmodule AOC2025.Day01 do
   Function to count how many times the dial passed through 0
 
   ## Examples:
-      iex> countZeroPasses(50, 2)
-      {50, 0}
-      iex> countZeroPasses(50, -3)
-      {50, 0}
-      iex> countZeroPasses(50, 51)
-      {50, 1}
-      iex> countZeroPasses(50, -50)
-      {50, 1}
+      iex> countZeroPasses(2, 50)
+      0
+      iex> countZeroPasses(-3, 50)
+      0
+      iex> countZeroPasses(-5, 0)
+      0
+      iex> countZeroPasses(48, 52)
+      1
   """
-  def countZeroPasses(position, turns) do
+  def countZeroPasses(turns, position) do
     steps_to_zero = if turns > 0, do: 100 - position, else: position
-    if steps_to_zero === 0 do
-      steps_to_zero = 100
-    end
+    steps_to_zero = if steps_to_zero === 0, do: 100, else: steps_to_zero
 
 
     if abs(turns) < steps_to_zero do
-      { position, 0 }
+      0
     else
-      { position, 1 + div(abs(turns) - steps_to_zero, 100) }
+      1 + div(abs(turns) - steps_to_zero, 100)
     end
   end
 end
