@@ -6,7 +6,7 @@ const get_inputs = Inputs(__dirname);
 
 describe("Tests for Advent of code 2024, day1: Historian Historia", () => {
   describe("Test Examples", () => {
-    test("Test from example 1, it should return 8", () => {
+    test("Test from example 1, it should return 11", () => {
       const inputs = get_inputs("example1.txt");
 
       const result = historianHistoria.solution_1(inputs);
