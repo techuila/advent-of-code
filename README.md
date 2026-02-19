@@ -16,6 +16,7 @@ Below is the table of the completed challenges. Each day has two parts, and the 
 |          |  3  |    🔜     |    🔜     |      🚀       |      🚀       |        ✅         |        ✅         |
 |          |  4  |    🔜     |    🔜     |      🚀       |      🚀       |        ✅         |        🚀         |
 | **2025** |  1  |    ✅     |    ✅     |      ✅       |      ✅       |        ✅         |        ✅         |
+| **2025** |  1  |    🚀     |    🚀     |      ✅       |      🚀       |        🚀         |        🚀         |
 
 ---
 
