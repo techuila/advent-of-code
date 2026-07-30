@@ -69,8 +69,8 @@ func SolvePart2Optimal(input []string) int {
 
 	sum := 0
 	for _, r := range ranges {
-		lo := sort.SearchInts(nums, r.lo)    // first index >= lo
-		hi := sort.SearchInts(nums, r.hi+1)  // first index > hi
+		lo := sort.SearchInts(nums, r.lo)   // first index >= lo
+		hi := sort.SearchInts(nums, r.hi+1) // first index > hi
 		sum += prefix[hi] - prefix[lo]
 	}
 	return sum
