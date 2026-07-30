@@ -6,22 +6,6 @@ import (
 
 // --- Day 3: Lobby ---
 func SolvePart1(input []string) int {
-	// 1. find the largest number
-	// first condition
-	// highest = left
-	// sec_highest = -1
-	// -- loop
-	// if highest < current_number {
-	//  highest = current_number
-	//  if highest - previous_number < highest - sec_highest {
-	//    sec_highest = previous_number
-	//  }
-	// } else {
-	//  if highest - current_number < highest - sec_highest {
-	//    sec_highest = current_number
-	//  }
-	// }
-	// -- loop end
 	result := 0
 
 	for _, line := range input {
