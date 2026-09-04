@@ -27,7 +27,22 @@ public class Solution {
     }
   }
 
-  // private static void solve2() {
-  //   Path path = Path.of("2015/01_lisp/data/input1.txt").toAbsolutePath();
-  // }
+  private static void solve2() {
+    Path path = Path.of("2015/01_lisp/data/input1.txt").toAbsolutePath();
+
+    try {
+      String content = Files.readString(path);
+      int sum = 0;
+      for (int index = 0; index < content.length(); index++) {
+        sum += content.charAt(index) == '(' ? 1 : -1;
+
+        if (sum == -1) {
+          System.out.println(index + 1);
+          break;
+        }
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
 }

@@ -8,7 +8,7 @@ Below is the table of the completed challenges. Each day has two parts, and the 
 
 |   Year   | Day | Go Part 1 | Go Part 2 | Java Part 1 | Java Part 2 | Elixir Part 1 | Elixir Part 2 | TypeScript Part 1 | TypeScript Part 2 |
 | :------: | :-: | :-------: | :-------: | :---------: | :---------: | :-----------: | :-----------: | :---------------: | :---------------: |
-| **2015** |  1  |    🔜     |    🔜     |     ✅      |     🔜      |      🔜       |      🔜       |        🔜         |        🔜         |
+| **2015** |  1  |    🔜     |    🔜     |     ✅      |     ✅      |      🔜       |      🔜       |        🔜         |        🔜         |
 | **2023** |  1  |    🔜     |    🔜     |     🔜      |     🔜      |      ✅       |      ✅       |        ✅         |        ✅         |
 |          |  2  |    🔜     |    🔜     |     🔜      |     🔜      |      ✅       |      ✅       |        ✅         |        ✅         |
 |          |  3  |    🔜     |    🔜     |     🔜      |     🔜      |      ✅       |      🔜       |        🚀         |        🔜         |
